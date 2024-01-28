@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+  
+  <script>
+    function validate(fn,args){
+      res=Object.keys(args).filter(key=>{
+        if(args[key]){
+          return true
+        }
+      })
+      if(res.length>0){
+        console.log("Following Data missing",res.split(","))
+      }else{
+        fn();
+      }
+    }
+
+    add=function(obj){
+      c=obj.a+obj.b
+      console.log("Result = ",c)
+    }   
+  </script>
+
+</body>
+</html>

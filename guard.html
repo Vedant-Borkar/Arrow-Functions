@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+  
+  <script>
+    function authguard(fn,uname,upass){
+      if(uname==="acme" && upass=="intern"){
+        fn()
+      }
+      else{
+        alert("Invalid cred")
+      }
+    }
+    add = function(){
+      c=10+20;
+      console.log("Results = ",c)
+    }
+
+    odd_even=function(){
+      n=14
+      if(n%14==0){
+        console.log(`${n} is EVEN`)
+      }else{
+        
+        console.log(`${n} is ODD`)
+      }
+    }
+
+    authguard(add,"acme","intern")
+    authguard(odd_even,"acme","intern")
+
+    authguard(()=>console.log("I am Arrow "),"acme","intern")
+  </script>
+
+</body>
+</html>
